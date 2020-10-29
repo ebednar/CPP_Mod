@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Phonebook.hpp"
 
 int main(void)
@@ -10,7 +9,7 @@ int main(void)
 	running = true;
 	while (running)
 	{
-		cin >> command;
+		std::cin >> command;
 		if (command == "EXIT")
 			running = false;
 		else if (command = "ADD")
