@@ -10,9 +10,9 @@ private:
 public:
 	void AddContact();
 	void DisplayAll();
-	void SearchContact(int i);
+	void SearchContact();
 private:
 	Contact contacts[8];
-}
+};
 
 #endif

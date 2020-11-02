@@ -7,34 +7,50 @@ void Phonebook::AddContact()
 		std::cout << "Your phonebook is full, can not add any more contacts, sorry" << std::endl;
 		return ;
 	}
-	contacts[index].setInfo();
+	contacts[index].SetInfo();
 	std::cout << "New contact added!" << std::endl;
+	std::cout << std::endl;
 	index++;
 }
 
 void Phonebook::DisplayAll()
 {
 	int i;
+
+	std::cout << "---------------------------------------------" << std::endl;
 	for (i = 0; i < index; ++i)
 	{
-		contacts[i].DisplayShortContact();
+		contacts[i].DisplayShortContact(i + 1);
 	}
+	std::cout << "---------------------------------------------" << std::endl;
 }
 
 void Phonebook::SearchContact()
 {
+	int i;
+
 	if (index == 0)
 	{
 		std::cout << "There is no any contact yet" << std::endl;
 		return ;
 	}
 	DisplayAll();
-	int i;
-	std::cout << "Enter contact index: ";
-	std::cin >> i;
-	std::cout << std::endl;
-	if (i < 0 || i >= index)
+	while (true)
 	{
-		std::cout << "Invalid contact index";
+		std::cout << "Enter number of contact to search: ";
+		std::cin >> i;
+		if (i >= 1 && i < index + 1)
+		{
+			std::cout << "Contact number " << i << " info:" << std::endl;
+			contacts[i + 1].DisplayContact();
+			std::cout << std::endl;
+			break;
+		}
+		else
+		{
+			std::cout << "Invalid number" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 	}
 }

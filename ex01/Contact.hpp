@@ -2,11 +2,12 @@
 # define CONTACT_HPP
 
 # include <iostream>
+# include <iomanip>
 
 class Contact
 {
 private:
-	std::string Contact::fields[11] = {
+	std::string fields[11] = {
 		"First Name",
 		"Last Name",
 		"Nickname",
@@ -22,9 +23,9 @@ private:
 public:
 	void SetInfo();
 	void DisplayContact();
-	void DisplayShortCOntact();
+	void DisplayShortContact(int index);
 private:
 	std::string info[11];
-}
+};
 
 #endif
