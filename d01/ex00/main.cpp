@@ -1,6 +1,6 @@
 #include "Pony.hpp"
 
-void ponyOnTheStack(std::string& const name)
+void ponyOnTheStack(std::string& name)
 {
 	Pony stackPony(name);
 
@@ -9,22 +9,24 @@ void ponyOnTheStack(std::string& const name)
 	stackPony.sleep();
 }
 
-void ponyOnTheHeap(std::string& const name)
+void ponyOnTheHeap(std::string& name)
 {
 	Pony *heapPony;
 
 	heapPony = new Pony(name);
-	stackPony->say();
-	stackPony->sleep();
-	stackPony->sleep();
+	heapPony->say();
+	heapPony->sleep();
+	heapPony->sleep();
 	delete heapPony;
 }
 
 int main(void)
 {
+	std::string stackPonyName = "Stack Pony";
+	std::string heapPonyName = "Heap Pony";
 	std::cout << "---Stack Pony:---" << std::endl;
-	ponyOnTheStack("Stack Pony");
+	ponyOnTheStack(stackPonyName);
 	std::cout << "---Heap Pony:---" << std::endl;
-	ponyOnTheHeap("Heap Pony");
+	ponyOnTheHeap(heapPonyName);
 	return (0);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ebednar <ebednar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/05 20:50:13 by ebednar           #+#    #+#             */
+/*   Updated: 2020/11/05 20:56:43 by ebednar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
 
 void Phonebook::AddContact()
@@ -42,7 +54,7 @@ void Phonebook::SearchContact()
 		if (i >= 1 && i < index + 1)
 		{
 			std::cout << "Contact number " << i << " info:" << std::endl;
-			contacts[i + 1].DisplayContact();
+			contacts[i - 1].DisplayContact();
 			std::cout << std::endl;
 			break;
 		}

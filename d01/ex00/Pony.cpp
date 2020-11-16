@@ -1,8 +1,8 @@
 #include "Pony.hpp"
 
-Pony::Pony(std::string const &name = "pony")
+Pony::Pony(std::string const &ponyName)
 {
-	this->name = name;
+	name = ponyName;
 	std::cout << "My name is: " << this->name << std::endl;
 }
 

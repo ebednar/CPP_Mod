@@ -2,13 +2,14 @@
 # define PONY_H
 
 # include <iostream>
+# include <string>
 
 class Pony
 {
 private:
-	std::string	const name;
+	std::string name;
 public:
-	Pony(std::string const &name = "Pony");
+	Pony(std::string const &ponyName);
 	~Pony();
 
 	void say() const;

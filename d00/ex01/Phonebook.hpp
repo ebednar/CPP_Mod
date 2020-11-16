@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ebednar <ebednar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/05 20:50:17 by ebednar           #+#    #+#             */
+/*   Updated: 2020/11/05 20:53:14 by ebednar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
@@ -6,8 +18,10 @@
 class Phonebook
 {
 private:
-	int index = 0;
+	int index;
 public:
+	Phonebook()
+	: index(0) {};
 	void AddContact();
 	void DisplayAll();
 	void SearchContact();
